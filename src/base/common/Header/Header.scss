@@ -1,0 +1,24 @@
+.mov-header-box {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  height: 70px;
+  font-family: $font;
+  color: $white;
+}
+
+.mov-header {
+  padding: 0 2*$spacer;
+  width: 100%;
+}
+
+.mov-header-elements {
+  color: $white;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: $font-weight-light;
+}

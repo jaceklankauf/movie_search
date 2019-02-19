@@ -1,2 +1,7 @@
 @import "variables";
 @import "general";
+@import "typography";
+@import "mixins";
+
+@import "../../base/common/Header/Header";
+@import "../../modules/Search/components/Search";

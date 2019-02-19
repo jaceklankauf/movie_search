@@ -1,0 +1,24 @@
+.mov-search-box {
+  width: 45%;
+}
+.mov-search-input {
+  border: none;
+  // background-color: $gray-darker;
+  height: 34px;
+  padding: 0 2 * $spacer 0 4 * $spacer;
+  width: 100%;
+  color: $white;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #2654fb;
+
+  font-family: $font, sans-serif;
+  margin: 0.5 * $spacer;
+  min-width: 88px;
+  border-radius: 2px;
+  @include text-xxsmall();
+
+}
