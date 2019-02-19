@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainView from '../layout/MainView';
 
@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact={true} path="/" component={MainView} />
+          <Route exact={ true } path="/" component={ MainView } />
         </Switch>
       </BrowserRouter>
     );
@@ -15,4 +15,3 @@ class App extends React.Component {
 }
 
 export default App;
-

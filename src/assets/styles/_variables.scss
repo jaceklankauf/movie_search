@@ -1,17 +1,48 @@
+$media-breakpoint-xs: 599px;
+$media-breakpoint-sm-up: 600px;
+$media-breakpoint-md-up: 900px;
+$media-breakpoint-lg-up: 1200px;
+$media-breakpoint-xl-up: 1800px;
+
 $font: 'Roboto';
 
+// dimensions
 $spacer: 10px;
-$header-height: 70px;
-$container-max-width: 1280px;
+$container-width: 1170px;
+$menu-icon-size: 24px;
+$titlebar-height: 64px;
+$titlebar-padding-side: 3 * $spacer;
+$titlebar-padding-top: 2 * $spacer;
 
 // colors
 $white: #fff;
 $black: #000;
 
+$gray-darker: #333;
+$gray-dark: #555555;
+$gray: #d8d8d8;
+$gray-light: #f1f1f1;
+
+$red: #ff0000;
+$green: #008000;
+
+$lighten-value: 15%;
+$darken-value: 15%;
+
+$text-color: $gray-darker;
+$subtext-color: $gray-dark;
+$disable-text-color: $gray;
+$danger-color: $red;
+$success-color: $green;
+$disable-color: $gray-light;
+
 // font weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
-$font-weight-medium: 600;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 
-
+// forms variables
+$input-height: 42px;
+$error-height: 22px;
+$input-bar-height: 2px;

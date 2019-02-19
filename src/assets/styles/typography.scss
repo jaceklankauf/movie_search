@@ -1,0 +1,31 @@
+@mixin text-xxsmall() {
+  font-size: 0.75rem;
+}
+
+@mixin text-xsmall() {
+  font-size: 0.875rem;
+}
+
+@mixin text-small() {
+  font-size: 1rem;
+}
+
+@mixin text-base() {
+  font-size: 1.125rem;
+}
+
+@mixin text-large() {
+  font-size: 1.25rem;
+}
+
+@mixin text-xlarge() {
+  font-size: 1.5rem;
+}
+
+@mixin text-xxlarge() {
+  font-size: 1.875rem;
+}
+
+@mixin text-xxxlarge() {
+  font-size: 2rem;
+}
