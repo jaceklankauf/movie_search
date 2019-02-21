@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   background-color: $black;
-  height: 70px;
+  height: $titlebar-height;
   font-family: $font;
   color: $white;
+  z-index: 2;
 }
 
 .mov-header {
