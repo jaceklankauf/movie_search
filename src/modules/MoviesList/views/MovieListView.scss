@@ -1,0 +1,61 @@
+.mov-movie-list-view {
+  background-color: $gray-darker;
+  width: 100%;
+  position: relative;
+  top: $titlebar-height;
+}
+
+.mov-movie-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.mov-movie-list-card {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  margin: 3 * $spacer;
+  transition: transform 0.5s, opacity 0.5s;
+  display: flex;
+  box-sizing: border-box;
+  &:hover {
+    border: 1px solid $blue;
+    transform: scale(1.2);
+
+    .mov-movie-list-overview,
+    .mov-movie-list-title {
+        color: $white;
+        opacity: 1;
+    }
+    .mov-movie-list-img {
+        opacity: 0.3;
+    }
+  }
+}
+
+.mov-movie-list-overview,
+.mov-movie-list-title {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  margin: $spacer;
+}
+
+.mov-movie-list-overview {
+  @include text-xxsmall();
+  align-self: center;
+  overflow: hidden;
+  height: 60%;
+}
+
+.mov-movie-list-title {
+  @include text-base();
+}
+
+.mov-movie-list-img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}

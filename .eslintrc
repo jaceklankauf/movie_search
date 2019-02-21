@@ -30,7 +30,6 @@
     "react/no-unescaped-entities": 0,
     "react/no-children-prop": 1,
     "semi": [1, "always"],
-    "no-console": 1,
     "no-debugger": 1,
     "brace-style": 2,
     "linebreak-style": 2,
