@@ -1,6 +1,7 @@
-import { 
-  URL_LIST, 
+import {
+  URL_LIST,
   API_KEY,
+  URL_MOVIE_DETAILS
 } from '../utils';
 
 export const FETCH_MOVIES = 'FETCH_MOVIES';
@@ -36,5 +37,40 @@ export function fetchMovieList() {
       .then(json => json.results)
       .then(data => dispatch(fetchMoviesSuccess(data)))
       .catch(error => dispatch(fetchMoviesError(error)));
+  };
+}
+
+export const FETCH_MOVIE = 'FETCH_MOVIE';
+export const FETCH_MOVIE_SUCCESS = 'FETCH_MOVIE_SUCCESS';
+export const FETCH_MOVIE_ERROR = 'FETCH_MOVIE_ERROR';
+
+function fetchMovie() {
+  return {
+    type: FETCH_MOVIE
+  };
+}
+
+function fetchMovieSuccess(data) {
+  return {
+    type: FETCH_MOVIE_SUCCESS,
+    data
+  };
+}
+
+function fetchMovieError(error) {
+  return {
+    type: FETCH_MOVIE_ERROR,
+    error
+  };
+}
+
+export function fetchMovieDetail(id) {
+  const urlMovieDetails = URL_MOVIE_DETAILS + id + API_KEY;
+  return function (dispatch) {
+    dispatch(fetchMovie());
+    return fetch(urlMovieDetails)
+      .then(response => response.json())
+      .then(data => dispatch(fetchMovieSuccess(data)))
+      .catch(error => dispatch(fetchMovieError(error)));
   };
 }
