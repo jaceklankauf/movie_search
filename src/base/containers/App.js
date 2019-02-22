@@ -10,6 +10,7 @@ class App extends React.Component {
         <Switch>
           <Route exact={true} path="/" component={MainView} />
           <Route exact={true} path="/movie/:movieId" component={MovieCardDetailsView} />
+          <Route path="/search/:keyword" component={MainView} />
         </Switch>
       </BrowserRouter>
     );

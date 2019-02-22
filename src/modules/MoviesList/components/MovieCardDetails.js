@@ -12,9 +12,14 @@ class MovieCardDetails extends React.Component {
     dispatch(fetchMovieDetail(`${ detailUrl.id }`));
   }
 
+  componentDidUpdate() {
+    const detailUrl = matchUrl('/movie/:id', location.pathname);
+    const { dispatch } = this.props;
+    dispatch(fetchMovieDetail(`${ detailUrl.id }`));
+  }
+
   render() {
     const { details } = this.props;
-    console.log(details);
     return (
       <div className="mov-movie-detail-view">
         <div className="mov-movie-detail-container">

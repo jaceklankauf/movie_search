@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import {
   FETCH_MOVIES, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERROR,
-  FETCH_MOVIE, FETCH_MOVIE_SUCCESS, FETCH_MOVIE_ERROR,
+  FETCH_MOVIE, FETCH_MOVIE_SUCCESS, FETCH_MOVIE_ERROR, SEARCH_MOVIE, SEARCH_MOVIE_SUCCESS, SEARCH_MOVIE_ERROR,
 } from '../actions/actions';
 
 const defaultStateList = {
@@ -13,10 +13,13 @@ const defaultStateList = {
 export const movieList = (state = defaultStateList, action) => {
   switch (action.type) {
     case FETCH_MOVIES:
+    case SEARCH_MOVIE:
       return { ...state, isFetching: true };
     case FETCH_MOVIES_SUCCESS:
+    case SEARCH_MOVIE_SUCCESS:
       return { ...state, isFetching: false, items: action.data };
     case FETCH_MOVIES_ERROR:
+    case SEARCH_MOVIE_ERROR:
       return { ...state, isFetching: false, error: action.data };
     default:
       return state;
