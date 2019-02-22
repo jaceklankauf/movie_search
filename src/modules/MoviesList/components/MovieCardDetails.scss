@@ -1,0 +1,38 @@
+.mov-movie-detail-view {
+  background-color: $gray-darker;
+  position: relative;
+  height: 100vh;
+}
+
+.mov-movie-detail-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 6 * $spacer;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+}
+
+.mov-movie-detail-overview {
+  max-width: 50%;
+}
+
+.mov-movie-detail-img {
+  height: 450px;
+  width: 300px;
+  margin: 3 * $spacer;
+}
+
+.mov-movie-img {
+  height: 100%
+}
+
+.mov-movie-title-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 3 * $spacer 0;
+}
+
+.mov-movie-detail-title {
+  @include text-xlarge();
+}

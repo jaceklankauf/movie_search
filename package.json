@@ -52,6 +52,7 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "resolve": "1.10.0",
+    "route-parser": "^0.0.5",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "1.2.2",

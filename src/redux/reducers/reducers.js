@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
-import { FETCH_MOVIES, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERROR } from '../actions/actions';
+import {
+  FETCH_MOVIES, FETCH_MOVIES_SUCCESS, FETCH_MOVIES_ERROR,
+  FETCH_MOVIE, FETCH_MOVIE_SUCCESS, FETCH_MOVIE_ERROR,
+} from '../actions/actions';
 
 const defaultStateList = {
   isFetching: false,
@@ -7,7 +10,7 @@ const defaultStateList = {
   error: {}
 };
 
-const movieList = (state = defaultStateList, action) => {
+export const movieList = (state = defaultStateList, action) => {
   switch (action.type) {
     case FETCH_MOVIES:
       return { ...state, isFetching: true };
@@ -20,8 +23,29 @@ const movieList = (state = defaultStateList, action) => {
   }
 };
 
-const moviesApp = combineReducers({
-  movieList,
-});
+const defaultStateDetail = {
+  isFetching: false,
+  item: {},
+  error: {}
+};
 
-export default moviesApp;
+export const movieDetail = (state = defaultStateDetail, action) => {
+  switch (action.type) {
+    case FETCH_MOVIE:
+      return Object.assign({}, state, {
+        isFetching: true
+      });
+    case FETCH_MOVIE_SUCCESS:
+      return Object.assign({}, state, {
+        isFetching: false,
+        item: action.data
+      });
+    case FETCH_MOVIE_ERROR:
+      return Object.assign({}, state, {
+        isFetching: false,
+        error: action.data
+      });
+    default:
+      return state;
+  }
+};
