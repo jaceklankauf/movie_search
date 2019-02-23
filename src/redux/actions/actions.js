@@ -65,15 +65,15 @@ export function fetchMovieList() {
 }
 
 export function searchMoviesList(title){
-  let url = URL_SEARCH + API_KEY + '&query=' + title;
+  const url = URL_SEARCH + API_KEY + '&query=' + title;
   return function(dispatch){
-    dispatch(searchMovie())
+    dispatch(searchMovie());
     return fetch(url)
       .then(response => response.json())
       .then(json => json.results)
       .then(data => dispatch(searchMovieSuccess(data,title)))
-      .catch(error => dispatch(searchMovieError(error)))
-  }
+      .catch(error => dispatch(searchMovieError(error)));
+  };
 }
 
 export const FETCH_MOVIE = 'FETCH_MOVIE';
